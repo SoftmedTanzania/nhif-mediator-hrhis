@@ -1,0 +1,33 @@
+{
+  "urn": "urn:uuid:111bc000-2fff-11ec-9f4e-b7780d90719b",
+  "version": "0.1.0",
+  "name": "NHIF Mediator HRHIS",
+  "description": "An OpenHIM mediator for handling system integration between HRHIS and NHIF",
+  "endpoints": [
+    {
+      "name": "NHIF Mediator HRHIS Route",
+      "host": "localhost",
+      "port": "3104",
+      "path": "/mediator",
+      "type": "http"
+    }
+  ],
+  "defaultChannelConfig": [
+    {
+      "name": "NHIF Mediator HRHIS",
+      "urlPattern": "^/mediator$",
+      "type": "http",
+      "allow": ["nhifmediatorhrhis"],
+      "routes": [
+        {
+          "name": "NHIF Mediator HRHIS Route",
+          "host": "localhost",
+          "port": "3104",
+          "path": "/mediator",
+          "type": "http",
+          "primary": "true"
+        }
+      ]
+    }
+  ]
+}
