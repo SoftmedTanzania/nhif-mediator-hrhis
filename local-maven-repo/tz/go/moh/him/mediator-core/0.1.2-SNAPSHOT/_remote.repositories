@@ -1,0 +1,6 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Tue Jan 12 11:21:02 EST 2021
+mediator-core-0.1.2-SNAPSHOT-javadoc.jar>=
+mediator-core-0.1.2-SNAPSHOT.jar>=
+mediator-core-0.1.2-SNAPSHOT.pom>=
+mediator-core-0.1.2-SNAPSHOT-sources.jar>=
