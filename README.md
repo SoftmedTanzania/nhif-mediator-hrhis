@@ -1,4 +1,5 @@
 # Tanzania HRHIS - NHIF Mediator
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/d238429391bd4dd583c2ede4fa3732ff)](https://app.codacy.com/gh/SoftmedTanzania/nhif-mediator-hrhis?utm_source=github.com&utm_medium=referral&utm_content=SoftmedTanzania/nhif-mediator-hrhis&utm_campaign=Badge_Grade_Settings)
 [![Java CI Badge](https://github.com/SoftmedTanzania/nhif-mediator-hrhis/workflows/Java%20CI%20with%20Maven/badge.svg)](https://github.com/SoftmedTanzania/nhif-mediator-hrhis/actions?query=workflow%3A%22Java+CI+with+Maven%22)
 [![Coverage Status](https://coveralls.io/repos/github/SoftmedTanzania/nhif-mediator-hrhis/badge.svg?branch=development)](https://coveralls.io/github/SoftmedTanzania/nhif-mediator-hrhis?branch=development)
 
