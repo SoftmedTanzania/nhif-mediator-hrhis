@@ -1,7 +1,7 @@
 {
   "urn": "urn:uuid:111bc000-2fff-11ec-9f4e-b7780d90719b",
   "version": "0.1.0",
-  "name": "NHIF Mediator HRHIS",
+  "name": "HRHIS - NHIF Mediator",
   "description": "An OpenHIM mediator for handling system integration between HRHIS and NHIF",
   "endpoints": [
     {
@@ -14,7 +14,7 @@
   ],
   "defaultChannelConfig": [
     {
-      "name": "NHIF Mediator HRHIS",
+      "name": "HRHIS - NHIF Send Practitioners Updates Channel",
       "urlPattern": "^/send-practitioners-updates$",
       "type": "http",
       "allow": ["hrhis-role"],
