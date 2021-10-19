@@ -1,8 +1,9 @@
-package tz.go.moh.him.nhif.mediator.hrhis;
+package tz.go.moh.him.nhif.mediator.hrhis.main;
 
 import org.junit.Assert;
 import org.junit.Test;
 import org.openhim.mediator.engine.MediatorConfig;
+import tz.go.moh.him.nhif.mediator.hrhis.MediatorMain;
 
 import java.lang.reflect.Method;
 

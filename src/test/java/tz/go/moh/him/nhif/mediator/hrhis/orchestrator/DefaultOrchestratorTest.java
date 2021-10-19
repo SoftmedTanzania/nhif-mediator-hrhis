@@ -1,4 +1,4 @@
-package tz.go.moh.him.nhif.mediator.hrhis;
+package tz.go.moh.him.nhif.mediator.hrhis.orchestrator;
 
 import akka.actor.ActorRef;
 import akka.actor.ActorSystem;
@@ -13,6 +13,7 @@ import org.openhim.mediator.engine.messages.FinishRequest;
 import org.openhim.mediator.engine.messages.MediatorHTTPRequest;
 import org.openhim.mediator.engine.testing.MockLauncher;
 import org.openhim.mediator.engine.testing.TestingUtils;
+import tz.go.moh.him.nhif.mediator.hrhis.DefaultOrchestrator;
 import tz.go.moh.him.nhif.mediator.hrhis.mock.MockDestination;
 
 import java.io.File;
