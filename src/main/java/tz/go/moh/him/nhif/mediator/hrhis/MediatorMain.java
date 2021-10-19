@@ -15,20 +15,13 @@ public class MediatorMain {
 
     private static RoutingTable buildRoutingTable() throws RoutingTable.RouteAlreadyMappedException {
         RoutingTable routingTable = new RoutingTable();
-
-        //TODO Configure routes here
-        //...
-        routingTable.addRoute("/mediator", DefaultOrchestrator.class);
+        routingTable.addRoute("/nhif", DefaultOrchestrator.class);
 
         return routingTable;
     }
 
     private static StartupActorsConfig buildStartupActorsConfig() {
         StartupActorsConfig startupActors = new StartupActorsConfig();
-
-        //TODO Add own startup actors here
-        //...
-
         return startupActors;
     }
 
