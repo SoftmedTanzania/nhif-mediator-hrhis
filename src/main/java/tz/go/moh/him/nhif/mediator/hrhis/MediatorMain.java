@@ -12,26 +12,37 @@ import java.io.InputStream;
 import java.util.Properties;
 
 public class MediatorMain {
-
+    /**
+     * Builds the routing table.
+     *
+     * @return Returns the routing table.
+     * @throws RoutingTable.RouteAlreadyMappedException if the route is already mapped
+     */
     private static RoutingTable buildRoutingTable() throws RoutingTable.RouteAlreadyMappedException {
         RoutingTable routingTable = new RoutingTable();
-
-        //TODO Configure routes here
-        //...
-        routingTable.addRoute("/mediator", DefaultOrchestrator.class);
+        routingTable.addRoute("/nhif", DefaultOrchestrator.class);
 
         return routingTable;
     }
 
+    /**
+     * Builds the startup actors configuration.
+     *
+     * @return Returns the startup actors configuration.
+     */
     private static StartupActorsConfig buildStartupActorsConfig() {
         StartupActorsConfig startupActors = new StartupActorsConfig();
-
-        //TODO Add own startup actors here
-        //...
-
         return startupActors;
     }
 
+    /**
+     * Loads the configuration.
+     *
+     * @param configPath The path of the configuration.
+     * @return Returns the configuration instance.
+     * @throws IOException                              if an IO exception occurs
+     * @throws RoutingTable.RouteAlreadyMappedException if the route is already mapped
+     */
     private static MediatorConfig loadConfig(String configPath) throws IOException, RoutingTable.RouteAlreadyMappedException {
         MediatorConfig config = new MediatorConfig();
 
@@ -73,6 +84,12 @@ public class MediatorMain {
         return config;
     }
 
+    /**
+     * The main entry point of the application.
+     *
+     * @param args The arguments.
+     * @throws Exception if an exception occurs
+     */
     public static void main(String... args) throws Exception {
         //setup actor system
         final ActorSystem system = ActorSystem.create("mediator");
@@ -91,6 +108,9 @@ public class MediatorMain {
         }
 
         MediatorConfig config = loadConfig(configPath);
+
+        config.setSSLContext(new MediatorConfig.SSLContext(true));
+
         final MediatorServer server = new MediatorServer(system, config);
 
         //setup shutdown hook

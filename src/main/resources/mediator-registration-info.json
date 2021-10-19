@@ -8,24 +8,68 @@
       "name": "NHIF Mediator HRHIS Route",
       "host": "localhost",
       "port": "3104",
-      "path": "/mediator",
+      "path": "/nhif",
       "type": "http"
     }
   ],
   "defaultChannelConfig": [
     {
       "name": "NHIF Mediator HRHIS",
-      "urlPattern": "^/mediator$",
+      "urlPattern": "^/nhif$",
       "type": "http",
-      "allow": ["nhifmediatorhrhis"],
+      "allow": ["hrhis-role"],
       "routes": [
         {
-          "name": "NHIF Mediator HRHIS Route",
+          "name": "HRHIS - NHIF Route",
           "host": "localhost",
           "port": "3104",
-          "path": "/mediator",
+          "path": "/nhif",
           "type": "http",
           "primary": "true"
+        }
+      ]
+    }
+  ],
+  "configDefs": [
+    {
+      "param": "destinationConnectionProperties",
+      "displayName": "Destination Connection Properties",
+      "description": "Configuration to set the hostname, port and path for the destination server",
+      "type": "struct",
+      "template": [
+        {
+          "param": "destinationHost",
+          "displayName": "Destination Host Name",
+          "description": "IP address/hostname of the destination server. e.g 192.168.1.1",
+          "type": "string"
+        },
+        {
+          "param": "destinationPort",
+          "displayName": "Destination Port Number",
+          "description": "The port number of the destination server. e.g 8080",
+          "type": "number"
+        },
+        {
+          "param": "destinationPath",
+          "displayName": "Destination Path",
+          "description": "The destination path for receiving of data from the HIM. eg /hdr",
+          "type": "string"
+        },
+        {
+          "param": "destinationScheme",
+          "displayName": "Destination Scheme",
+          "description": "Whether the destination is using HTTP or HTTPS requests",
+          "type": "option",
+          "values": [
+            "http",
+            "https"
+          ]
+        },
+        {
+          "param": "destinationAuthorization",
+          "displayName": "Destination Authorization",
+          "description": "The destination authorization credentials for receiving data from the HIM.",
+          "type": "string"
         }
       ]
     }
