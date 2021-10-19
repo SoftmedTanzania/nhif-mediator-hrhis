@@ -23,6 +23,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Properties;
 
+import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
 public class DefaultOrchestratorTest {
@@ -119,6 +120,7 @@ public class DefaultOrchestratorTest {
 
     @Test
     public void testMediatorHTTPRequest() throws Exception {
+        assertNotNull(system);
         new JavaTestKit(system) {{
             final ActorRef defaultOrchestrator = system.actorOf(Props.create(DefaultOrchestrator.class, configuration));
 
