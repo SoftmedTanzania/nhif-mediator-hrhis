@@ -8,14 +8,14 @@
       "name": "NHIF Mediator HRHIS Route",
       "host": "localhost",
       "port": "3104",
-      "path": "/nhif",
+      "path": "/send-practitioners-updates",
       "type": "http"
     }
   ],
   "defaultChannelConfig": [
     {
       "name": "NHIF Mediator HRHIS",
-      "urlPattern": "^/nhif$",
+      "urlPattern": "^/send-practitioners-updates$",
       "type": "http",
       "allow": ["hrhis-role"],
       "routes": [
@@ -23,7 +23,7 @@
           "name": "HRHIS - NHIF Route",
           "host": "localhost",
           "port": "3104",
-          "path": "/nhif",
+          "path": "/send-practitioners-updates",
           "type": "http",
           "primary": "true"
         }
