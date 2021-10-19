@@ -20,7 +20,7 @@ public class MediatorMain {
      */
     private static RoutingTable buildRoutingTable() throws RoutingTable.RouteAlreadyMappedException {
         RoutingTable routingTable = new RoutingTable();
-        routingTable.addRoute("/nhif", DefaultOrchestrator.class);
+        routingTable.addRoute("/send-practitioners-updates", DefaultOrchestrator.class);
 
         return routingTable;
     }
